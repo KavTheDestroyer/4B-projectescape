@@ -13,25 +13,25 @@
 
   <!-- HTML here-->
   <!--Add your HTML here-->
-<div class = "cover">
+<div class = "cover"><!--Outermost layer-->
     
-  <div class="whole">
+  <div class="whole"><!--The whole game screen-->
 
-      <div class="screen box">
-          <div class="buttons">
+      <div class="screen box"><!--The button bar on the top-->
+          <div class="buttons"><!--The button bar on the top-->
               <strong>Escape</strong>
-           
-           
+			  <input type ="button" value="Quit" onClick="window.close();">           
           </div>
-      </div>
+		  
+ </div>
 
-      <div id="text" class="middle box">
+      <div id="text" class="middle box"><!--The part with all the game texts-->
           <p id="story"></p>
 		  <input type="button" value ="Restart" onClick="onLoadHandler()">
       </div>
 
       <div id="choices" class="lower box">
-          <div class="choice buttons">
+          <div class="choice buttons"><!--The button bar at the bottom-->
               <input type="button" class="game functions" id="choice1">
               <input type="button" class="game functions" id="choice2">
           </div>

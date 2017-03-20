@@ -2,16 +2,18 @@ body {
   background-image: url("images/game-background.jpg");
   background-size: 100%;
 }
-   .whole {
-  position: absolute;
-  margin: auto;
-  height:70%;
-  width:70%;
-  top:15%;
-  left:15%;
-  background-color: #D3D0D0 ;
-  background-image: url("images/silver.jpg");
+
+.whole {
+	position: absolute;
+	margin: auto;
+	height:70%;
+	width:70%;
+	top:15%;
+	left:15%;
+	background-color: #D3D0D0 ;
+	background-image: url("images/silver.jpg");
 }
+
 #text {
   /*border-left: #303032 solid 16px;*/
   /* border-right: #303032 solid 16px;*/

@@ -22,6 +22,7 @@ function updateScreen(newState) {
             choice2NextState = "S.2";
             break;
 
+
         case "S1":
 		/*This is the "S" storyline */
             text = "The ropes are too thick and bound too tight for you to move.  But then you find a sharp object by the floor next to you.";
@@ -49,15 +50,15 @@ function updateScreen(newState) {
             break;
 			
 		case "S3":
-			text ="You leave the object alone so you are still tied to the chair, though you still made a lot of noise during your struggle."
+			text ="You leave the object alone so you are still tied to the chair, though you still made a lot of noise during your struggle.";
 			 choice1Text = "Continue";
             choice1NextState = "S.11";
 			break;
 			
 		case "S4":
-			text ="You broke the window with the sharp object and jumped out of the window, you landed into a bin full of trash bags."
-			choice1Text = "continue"
-			choice1NextState = "S5"
+			text ="You broke the window with the sharp object and jumped out of the window, you landed into a bin full of trash bags.";
+			choice1Text = "continue";
+			choice1NextState = "S5";
 			break;
 			
 		case "S.3":
@@ -73,7 +74,7 @@ function updateScreen(newState) {
 			choice1Text = "Left";
 			choice1NextState = "S6";
 			choice2Text = "Right";
-			choice2NextState = "S7"
+			choice2NextState = "S7";
 			break;
 			
 		case "S.4":
@@ -88,13 +89,6 @@ function updateScreen(newState) {
 			choice1NextState ="Dead";
 			break;
 		
-		case "S7":
-			text = "You go to the police station and you live";
-			choice1Text = "continue";
-			choice1NextState = "S";
-			break;
-		
-		 
 		case "S.5":
 			text ="You then decide what to do next and see a silver glint on the floor";
 			choice1Text = "Grab the object";
@@ -102,55 +96,115 @@ function updateScreen(newState) {
 			 break;
 		
 		case "S.6":
-			text ="You are tring to break free from the ropes while using the sharp object to cut yourself free"
+			text ="You are tring to break free from the ropes while using the sharp object to cut yourself free";
 			choice1Text ="Keep on cutting";
 			choice1NextState ="S.8";
 			break;
+			
+			case "S7":
+			text = "You go to the police station and you report to the police.";
+			choice1Text = "continue";
+			choice1NextState = "S8";
+			break;
 		
+		case "S8":
+			text = "They ask you, 'What happened to you?'";
+			choice1Text = "You lie to the police.";
+			choice1NextState = "S9";
+			choice2Text = "You tell the truth to the police.";
+			choice2NextState = "S.15";
+			break;
 		
 		case "S.8":
-			text ="You keep on cutting, but you accidently slit across your wrist. You dropp the object and cry in fustration."
+			text ="You keep on cutting, but you accidently slit across your wrist. You dropp the object and cry in fustration.";
 			choice1Text ="Cry (you have no choice for this one)";
 			choice1NextState ="S.10";
 			break;
+		
+		case "S9":
+			text ="You said,'I was attacked by a dog.' The police officer asked, 'Do you know the breed of the dog?'";
+			choice1Text ="continue";
+			choice1NextState ="S10";
+			break;
 			
 		case "S.10":
-			text ="There is suddenly a sound of keys jingling and the door knob turns."
+			text ="There is suddenly a sound of keys jingling and the door knob turns.";
 			choice1Text ="Stay back onto chair";
 			choice1NextState ="S.11";
 			break;
 			
+		case "S10":
+			text ="You tell the police that it was a huge German Shepherd. The police looks to each other and they look at you suspiciously.";
+			choice1Text ="continue";
+			choiceNextState ="S11";
+			break;
+			
 		case "S.11":
-			text ="A person with a ski mask comes in and laughs"
+			text ="A person with a ski mask comes in and laughs";
 			choice1Text ="continue";
 			choice1NextState ="S.12";
 			break;
 			
+		case "S11":
+			text ="They lead you to another dim-lit room and the handcuff you to the table.";
+			choice1Text ="continue";
+			choice1NextState ="End";
+			break;
+			
 		case "S.12":
-			text ="The kidnapper asks, 'Do you want to escape?'"
+			text ="The kidnapper asks, 'Do you want to escape?'";
 			choice1Text ="Yes";
 			choice1NextState ="S.13";
 			choice2Text ="No";
 			choice2NextState ="S.14";
 			break;
+		
+		case "S12":
+			text =""
 			
 		case "S.13":
-			text  ="You jump out of the window and escape and you live"
+			text  ="You jump out of the window and escape and you live";
 			choice1Text ="continue";
-			choice1NextState ="S";
+			choice1NextState ="S7";
 			break;
 		
 		case "S.14":
-			text ="The man said 'Ok....For being honest...I'll grant you a quick death for annoying me.' Then he shot you on the head.'"
+			text = "The man said 'Ok....For being honest...I'll grant you a quick death for annoying me.' Then he shot you on the head.'";
 			choice1Text ="continue";
 			choice1NextState ="Dead";
 			break;
-	
+		
+		case "S.15":
+			text = "You say, 'I got kidnapped and was brought into a room.'";
+			choice1Text ="continue";
+			choice1NextState ="S.16";
+			break;
+			
+		case "S.16":
+			text ="They then ask you,'do you want to call for an investigation or not?' then the officer walked away and start discussing with other officers.'";
+			choice1Text ="Yes";
+			choice1NextState ="S11";
+			choice2Text ="No";
+			choice2NextState ="S.17";
+			break;
+		
+		case "S.17":
+			text ="The officer heard your answer, he returned and repied to you' I am sorry, but since you are the witness about this case, we are responsible for you now.'";
+			choice1Text ="Continue";
+			choice1NextState ="S11";
+			break;
+			
 		case "Dead":
-			text ="you died, restart?"
+			text ="you died, restart?";
 			choice1Text ="restart";
 			choice1NextState = "S";
             break;
+		
+		case "End":
+			text ="Our story ends here for now. Thanks for playin'";
+			choice1Text ="End";
+			choice1NextState ="S";
+			break;
 
 	
         default:
@@ -160,14 +214,14 @@ function updateScreen(newState) {
 
     document.getElementById("story").innerHTML = text;
 
-    if (choice1Text == "") {
+    if (choice1Text === "") {
         document.getElementById("choice1").style.visibility = "hidden";
     } else {
         document.getElementById("choice1").style.visibility = "visible";
         document.getElementById("choice1").value = choice1Text;
         document.getElementById("choice1").setAttribute("onClick", "updateScreen('" + choice1NextState + "');");
     }
-    if (choice2Text == "") {
+    if (choice2Text === "") {
         document.getElementById("choice2").style.visibility = "hidden";
     } else {
         document.getElementById("choice2").style.visibility = "visible";
