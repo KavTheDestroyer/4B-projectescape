@@ -7,7 +7,7 @@ body {
 	position: absolute;
 	margin: auto;
 	height:70%;
-	width:70%;
+	width:50%;
 	top:15%;
 	left:15%;
 	background-color: #D3D0D0 ;
@@ -63,4 +63,10 @@ body {
   /*border-left: #303032 solid 16px;*/
   /* border-right: #303032 solid 16px;*/
   /* padding: 16px;*/
+}
+#inventory {
+	float:right;
+	width:300px;
+	height:300px;
+	color: #C8C9CF;
 }
