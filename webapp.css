@@ -30,9 +30,20 @@ body {
   top: 50px;
   padding: 16px;
 }
+
+/*Inventory*/
+  #inventory {
+  background-image: url("images/silver.jpg");
+  background-color: transparent;
+  height: 100%;
+  width: 55%;
+  position: absolute;
+  top:0%;
+  left:107%;
+  }
 /* Box */
 .screen {
-  background-color: #303032 ;
+  background-color: #303032;
   height: 10%;
   width: 100%;
   position: absolute;
