@@ -20,6 +20,7 @@ function updateScreen(newState) {
             choice1NextState = "S1";
             choice2Text = "Stay put";
             choice2NextState = "S.2";
+			document.getElementById("progressBar").value = 0;
             break;
 
 
@@ -30,6 +31,7 @@ function updateScreen(newState) {
             choice1NextState = "S2";
             choice2Text = "Leave it alone";
             choice2NextState = "S3";
+			document.getElementById("progressBar").value = 0;
             break;
 
         case "S.2":
@@ -39,6 +41,7 @@ function updateScreen(newState) {
             choice1NextState = "S.3";
             choice2Text = "Stay quiet";
             choice2NextState = "S.4";
+			document.getElementById("progressBar").value = 0;
             break;
 
         case "S2":
@@ -47,18 +50,24 @@ function updateScreen(newState) {
             choice1NextState = "S4";
             choice2Text = "Or try opening the door and escape.";
             choice2NextState = "S5";
+			document.getElementById("progressBar").value = 0;
+
             break;
 			
 		case "S3":
 			text ="You leave the object alone so you are still tied to the chair, though you still made a lot of noise during your struggle.";
 			 choice1Text = "Continue";
             choice1NextState = "S.11";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 			
 		case "S4":
 			text ="You broke the window with the sharp object and jumped out of the window, you landed into a bin full of trash bags.";
 			choice1Text = "continue";
 			choice1NextState = "S5";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 			
 		case "S.3":
@@ -67,6 +76,8 @@ function updateScreen(newState) {
             choice1NextState = "S.10";
             choice2Text = "Shut up";
             choice2NextState = "S.4";
+			document.getElementById("progressBar").value = 0;
+
             break;
 			
 		case "S5":
@@ -75,36 +86,47 @@ function updateScreen(newState) {
 			choice1NextState = "S6";
 			choice2Text = "Right";
 			choice2NextState = "S7";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 			
 		case "S.4":
             text = "You stayed quiet and the foot steps walks away.";
             choice1Text = "continue";
             choice1NextState = "S.5";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 			 
 		case "S6":
 			text = "You accidentally run into a group of thugs and they kill you. Try again.";
 			choice1Text = "continue";
 			choice1NextState ="Dead";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 		
 		case "S.5":
 			text ="You then decide what to do next and see a silver glint on the floor";
 			choice1Text = "Grab the object";
             choice1NextState = "S.6";
+			document.getElementById("progressBar").value = 0;
+
 			 break;
 		
 		case "S.6":
 			text ="You are tring to break free from the ropes while using the sharp object to cut yourself free";
 			choice1Text ="Keep on cutting";
 			choice1NextState ="S.8";
+			document.getElementById("progressBar").value = 0;
+
 			break;
 			
 			case "S7":
 			text = "You go to the police station and you report to the police.";
 			choice1Text = "continue";
 			choice1NextState = "S8";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S8":
@@ -113,42 +135,49 @@ function updateScreen(newState) {
 			choice1NextState = "S9";
 			choice2Text = "You tell the truth to the police.";
 			choice2NextState = "S.15";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S.8":
 			text ="You keep on cutting, but you accidently slit across your wrist. You dropp the object and cry in fustration.";
 			choice1Text ="Cry (you have no choice for this one)";
 			choice1NextState ="S.10";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S9":
 			text ="You said,'I was attacked by a dog.' The police officer asked, 'Do you know the breed of the dog?'";
 			choice1Text ="continue";
 			choice1NextState ="S10";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S.10":
 			text ="There is suddenly a sound of keys jingling and the door knob turns.";
 			choice1Text ="Stay back onto chair";
 			choice1NextState ="S.11";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S10":
 			text ="You tell the police that it was a huge German Shepherd. The police looks to each other and they look at you suspiciously.";
 			choice1Text ="continue";
 			choiceNextState ="S11";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S.11":
 			text ="A person with a ski mask comes in and laughs";
 			choice1Text ="continue";
 			choice1NextState ="S.12";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S11":
 			text ="They lead you to another dim-lit room and the handcuff you to the table.";
 			choice1Text ="continue";
 			choice1NextState ="End";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S.12":
@@ -157,27 +186,33 @@ function updateScreen(newState) {
 			choice1NextState ="S.13";
 			choice2Text ="No";
 			choice2NextState ="S.14";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S12":
 			text =""
+			document.getElementById("progressBar").value = 0;
+			break;
 			
 		case "S.13":
 			text  ="You jump out of the window and escape and you live";
 			choice1Text ="continue";
 			choice1NextState ="S7";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S.14":
 			text = "The man said 'Ok....For being honest...I'll grant you a quick death for annoying me.' Then he shot you on the head.'";
 			choice1Text ="continue";
 			choice1NextState ="Dead";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S.15":
 			text = "You say, 'I got kidnapped and was brought into a room.'";
 			choice1Text ="continue";
 			choice1NextState ="S.16";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "S.16":
@@ -186,24 +221,28 @@ function updateScreen(newState) {
 			choice1NextState ="S11";
 			choice2Text ="No";
 			choice2NextState ="S.17";
+			document.getElementById("progressBar").value = 0;
 			break;
 		
 		case "S.17":
 			text ="The officer heard your answer, he returned and repied to you' I am sorry, but since you are the witness about this case, we are responsible for you now.'";
 			choice1Text ="Continue";
 			choice1NextState ="S11";
+			document.getElementById("progressBar").value = 0;
 			break;
 			
 		case "Dead":
 			text ="you died, restart?";
 			choice1Text ="restart";
 			choice1NextState = "S";
+			document.getElementById("progressBar").value = 0;
             break;
 		
 		case "End":
 			text ="Our story ends here for now. Thanks for playin'";
 			choice1Text ="End";
 			choice1NextState ="S";
+			document.getElementById("progressBar").value = 0;
 			break;
 
 	

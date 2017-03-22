@@ -64,9 +64,3 @@ body {
   /* border-right: #303032 solid 16px;*/
   /* padding: 16px;*/
 }
-#inventory {
-	float:right;
-	width:300px;
-	height:300px;
-	color: #C8C9CF;
-}
