@@ -176,7 +176,7 @@ function updateScreen(newState) {
 		case "S11":
 			text ="They lead you to another dim-lit room and the handcuff you to the table.";
 			choice1Text ="continue";
-			choice1NextState ="End";
+			choice1NextState ="S12";
 			document.getElementById("progressBar").value = 0;
 			break;
 			
@@ -190,7 +190,9 @@ function updateScreen(newState) {
 			break;
 		
 		case "S12":
-			text =""
+			text ="Then they start interrogating you and ask a lot a questions irrelevant to the case. Afterward, they quickly put a dark cloth bag oveer your head and tied your ankles, wrists and legs up.";
+			choice1Text ="continue";
+			choice1NextState ="S13";
 			document.getElementById("progressBar").value = 0;
 			break;
 			
@@ -200,12 +202,26 @@ function updateScreen(newState) {
 			choice1NextState ="S7";
 			document.getElementById("progressBar").value = 0;
 			break;
+			
+		case "S13":
+			text ="You then hear engines starting, men shouting, a sound of gates openning. You then quickly fall asleep from the hum of the engine.";
+			choice1Text ="continue";
+			choice1NextState ="S14";
+			break;
 		
 		case "S.14":
 			text = "The man said 'Ok....For being honest...I'll grant you a quick death for annoying me.' Then he shot you on the head.'";
 			choice1Text ="continue";
 			choice1NextState ="Dead";
 			document.getElementById("progressBar").value = 0;
+			break;
+			
+		case "S14":
+			text ="When you wake up, you find yourself in a damp cell, with a crying little girl clutching a teddy bear. Do you start a conversation?";
+			choice1Text ="Yes";
+			choice1NextState ="S15";
+			choice2Text ="No";
+			choice2NextState ="S.18";
 			break;
 		
 		case "S.15":
@@ -215,6 +231,12 @@ function updateScreen(newState) {
 			document.getElementById("progressBar").value = 0;
 			break;
 			
+		case "S15":
+			text ="You start to discuss what happened to yourself but quickly get interupted by the cell guard.";
+			choice1Text ="continue";
+			choice1NextState ="S16";
+			break;
+		
 		case "S.16":
 			text ="They then ask you,'do you want to call for an investigation or not?' then the officer walked away and start discussing with other officers.'";
 			choice1Text ="Yes";
@@ -224,11 +246,34 @@ function updateScreen(newState) {
 			document.getElementById("progressBar").value = 0;
 			break;
 		
+		case "S16":
+			text ="He then says that one of your family members is here to bring you home. Do you accept the offer?";
+			choice1Text ="Yes";
+			choice1NextState ="S17";
+			choice2Text ="No";
+			choice2NextState ="S17";
+			break;
+		
 		case "S.17":
 			text ="The officer heard your answer, he returned and repied to you' I am sorry, but since you are the witness about this case, we are responsible for you now.'";
 			choice1Text ="Continue";
 			choice1NextState ="S11";
 			document.getElementById("progressBar").value = 0;
+			break;
+		
+		case "S17":
+			text ="A woman who comes into the room claims that she's your mom and offers to take you somewhere safe.  You notice that she has warm brown eyes....... the thing that you remember about Mom......... You don't remember much and that last thing you recall is finding your yourself tied to a chair in a creepy dark room. Is she really who she claims she is? Can she be trusted?";
+			choice1Text ="Yes";
+			choice1NextState ="S18";
+			choice2Text ="No";
+			choice2NextState="S.19";
+			document.getElementById("progressBar").value = 0;
+			break;
+			
+		case "S.18":
+			text ="You keep quiet when the guards walk to you.";
+			choice1Text ="continue";
+			choice1NextState ="S16";
 			break;
 			
 		case "Dead":
