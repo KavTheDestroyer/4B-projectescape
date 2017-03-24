@@ -17,8 +17,10 @@ function updateScreen(newState) {
 		/* This is the start of the story */
             text = "You find yourself tied to a chair in a creepy dark room. You assume that the door is locked. What do you do?";
             choice1Text = "Try to get free from the chair";
+			document.getElementById("rock").hidden=true;
             choice1NextState = "S1";
             choice2Text = "Stay put";
+			document.getElementById("rock").hidden=true;
             choice2NextState = "S.2";
             break;
 
@@ -27,8 +29,11 @@ function updateScreen(newState) {
 		/*This is the "S" storyline */
             text = "The ropes are too thick and bound too tight for you to move.  But then you find a sharp object by the floor next to you.";
             choice1Text = "Try to get the object";
+			document.getElementById("chair").hidden=true;
+			document.getElementById("rock").hidden=false;
             choice1NextState = "S2";
             choice2Text = "Leave it alone";
+			document.getElementById("chair").hidden=true;
             choice2NextState = "S3";
             break;
 
